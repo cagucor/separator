@@ -1,0 +1,593 @@
+{
+  "total_segments": 14,
+  "segments": [
+    {
+      "segment_id": 1,
+      "filename": "test_segment_001.csv",
+      "start_time": "0.864",
+      "end_time": "7.13",
+      "duration_seconds": 6.266,
+      "sample_count": 299,
+      "dominant_columns": [
+        "joint_7",
+        "joint_1",
+        "joint_2",
+        "joint_3",
+        "joint_4"
+      ],
+      "column_variations": {
+        "joint_7": {
+          "std": 0.2217296435672947,
+          "range": 0.756,
+          "combined_score": 0.16762761053687478
+        },
+        "joint_1": {
+          "std": 0.0,
+          "range": 0.0,
+          "combined_score": 0.0
+        },
+        "joint_2": {
+          "std": 0.0,
+          "range": 0.0,
+          "combined_score": 0.0
+        },
+        "joint_3": {
+          "std": 0.0,
+          "range": 0.0,
+          "combined_score": 0.0
+        },
+        "joint_4": {
+          "std": 0.0,
+          "range": 0.0,
+          "combined_score": 0.0
+        }
+      }
+    },
+    {
+      "segment_id": 2,
+      "filename": "test_segment_002.csv",
+      "start_time": "8.252",
+      "end_time": "12.729",
+      "duration_seconds": 4.4769999999999985,
+      "sample_count": 214,
+      "dominant_columns": [
+        "joint_6",
+        "half_arm_2_link.x",
+        "forearm_link.x",
+        "spherical_wrist_1_link.x",
+        "spherical_wrist_2_link.x"
+      ],
+      "column_variations": {
+        "joint_6": {
+          "std": 0.15871924874135923,
+          "range": 0.538,
+          "combined_score": 0.08539095582285128
+        },
+        "half_arm_2_link.x": {
+          "std": 0.025508755178556053,
+          "range": 0.086,
+          "combined_score": 0.0021937529453558203
+        },
+        "forearm_link.x": {
+          "std": 0.025499458199710546,
+          "range": 0.086,
+          "combined_score": 0.0021929534051751067
+        },
+        "spherical_wrist_1_link.x": {
+          "std": 0.025499458199710546,
+          "range": 0.086,
+          "combined_score": 0.0021929534051751067
+        },
+        "spherical_wrist_2_link.x": {
+          "std": 0.025499458199710546,
+          "range": 0.086,
+          "combined_score": 0.0021929534051751067
+        }
+      }
+    },
+    {
+      "segment_id": 3,
+      "filename": "test_segment_003.csv",
+      "start_time": "13.892",
+      "end_time": "19.181",
+      "duration_seconds": 5.2890000000000015,
+      "sample_count": 252,
+      "dominant_columns": [
+        "joint_5",
+        "spherical_wrist_2_link.y",
+        "half_arm_2_link.y",
+        "forearm_link.y",
+        "shoulder_link.y"
+      ],
+      "column_variations": {
+        "joint_5": {
+          "std": 0.18687841960492055,
+          "range": 0.635,
+          "combined_score": 0.11866779644912455
+        },
+        "spherical_wrist_2_link.y": {
+          "std": 0.015158774666083494,
+          "range": 0.051,
+          "combined_score": 0.0007730975079702581
+        },
+        "half_arm_2_link.y": {
+          "std": 0.015131279065129993,
+          "range": 0.051000000000000004,
+          "combined_score": 0.0007716952323216297
+        },
+        "forearm_link.y": {
+          "std": 0.015124448444322083,
+          "range": 0.051000000000000004,
+          "combined_score": 0.0007713468706604263
+        },
+        "shoulder_link.y": {
+          "std": 0.015121044000626412,
+          "range": 0.051,
+          "combined_score": 0.000771173244031947
+        }
+      }
+    },
+    {
+      "segment_id": 4,
+      "filename": "test_segment_004.csv",
+      "start_time": "20.274",
+      "end_time": "24.445",
+      "duration_seconds": 4.170999999999999,
+      "sample_count": 199,
+      "dominant_columns": [
+        "joint_4",
+        "shoulder_link.x",
+        "half_arm_1_link.x",
+        "half_arm_2_link.x",
+        "forearm_link.x"
+      ],
+      "column_variations": {
+        "joint_4": {
+          "std": 0.16859108581275006,
+          "range": 0.568,
+          "combined_score": 0.09575973674164202
+        },
+        "shoulder_link.x": {
+          "std": 0.07044287882892575,
+          "range": 0.236,
+          "combined_score": 0.016624519403626477
+        },
+        "half_arm_1_link.x": {
+          "std": 0.07044287882892575,
+          "range": 0.236,
+          "combined_score": 0.016624519403626477
+        },
+        "half_arm_2_link.x": {
+          "std": 0.07044287882892575,
+          "range": 0.236,
+          "combined_score": 0.016624519403626477
+        },
+        "forearm_link.x": {
+          "std": 0.07040570827841208,
+          "range": 0.235,
+          "combined_score": 0.01654534144542684
+        }
+      }
+    },
+    {
+      "segment_id": 5,
+      "filename": "test_segment_005.csv",
+      "start_time": "25.56",
+      "end_time": "30.018",
+      "duration_seconds": 4.458000000000002,
+      "sample_count": 213,
+      "dominant_columns": [
+        "joint_3",
+        "forearm_link.y",
+        "half_arm_1_link.y",
+        "half_arm_2_link.y",
+        "shoulder_link.y"
+      ],
+      "column_variations": {
+        "joint_3": {
+          "std": 0.180600433211595,
+          "range": 0.61,
+          "combined_score": 0.11016626425907294
+        },
+        "forearm_link.y": {
+          "std": 0.04903587650761662,
+          "range": 0.164,
+          "combined_score": 0.008041883747249127
+        },
+        "half_arm_1_link.y": {
+          "std": 0.04863600998143964,
+          "range": 0.164,
+          "combined_score": 0.007976305636956102
+        },
+        "half_arm_2_link.y": {
+          "std": 0.04870309534461533,
+          "range": 0.163,
+          "combined_score": 0.0079386045411723
+        },
+        "shoulder_link.y": {
+          "std": 0.0486976399652757,
+          "range": 0.16299999999999998,
+          "combined_score": 0.007937715314339937
+        }
+      }
+    },
+    {
+      "segment_id": 6,
+      "filename": "test_segment_006.csv",
+      "start_time": "31.147",
+      "end_time": "35.857",
+      "duration_seconds": 4.710000000000001,
+      "sample_count": 225,
+      "dominant_columns": [
+        "joint_2",
+        "shoulder_link.x",
+        "half_arm_1_link.x",
+        "half_arm_2_link.x",
+        "shoulder_link.z"
+      ],
+      "column_variations": {
+        "joint_2": {
+          "std": 0.19072714523258463,
+          "range": 0.645,
+          "combined_score": 0.1230190086750171
+        },
+        "shoulder_link.x": {
+          "std": 0.12526119726269,
+          "range": 0.42000000000000004,
+          "combined_score": 0.05260970285032981
+        },
+        "half_arm_1_link.x": {
+          "std": 0.12526119726269,
+          "range": 0.42000000000000004,
+          "combined_score": 0.05260970285032981
+        },
+        "half_arm_2_link.x": {
+          "std": 0.08762577853287275,
+          "range": 0.29300000000000004,
+          "combined_score": 0.025674353110131717
+        },
+        "shoulder_link.z": {
+          "std": 0.08457541529910376,
+          "range": 0.28300000000000003,
+          "combined_score": 0.023934842529646366
+        }
+      }
+    },
+    {
+      "segment_id": 7,
+      "filename": "test_segment_007.csv",
+      "start_time": "36.985",
+      "end_time": "42.587",
+      "duration_seconds": 5.602000000000004,
+      "sample_count": 267,
+      "dominant_columns": [
+        "joint_1",
+        "half_arm_1_link.y",
+        "shoulder_link.y",
+        "shoulder_link.x",
+        "half_arm_1_link.x"
+      ],
+      "column_variations": {
+        "joint_1": {
+          "std": 0.226220534053201,
+          "range": 0.767,
+          "combined_score": 0.17351114961880518
+        },
+        "half_arm_1_link.y": {
+          "std": 0.11200489387462326,
+          "range": 0.374,
+          "combined_score": 0.041889830309109095
+        },
+        "shoulder_link.y": {
+          "std": 0.1116392633016231,
+          "range": 0.373,
+          "combined_score": 0.041641445211505417
+        },
+        "shoulder_link.x": {
+          "std": 0.10264341785342779,
+          "range": 0.34400000000000003,
+          "combined_score": 0.03530933574157916
+        },
+        "half_arm_1_link.x": {
+          "std": 0.10155741413812026,
+          "range": 0.34,
+          "combined_score": 0.034529520806960895
+        }
+      }
+    },
+    {
+      "segment_id": 8,
+      "filename": "test_segment_008.csv",
+      "start_time": "43.721",
+      "end_time": "48.913",
+      "duration_seconds": 5.192,
+      "sample_count": 248,
+      "dominant_columns": [
+        "joint_1",
+        "half_arm_1_link.y",
+        "shoulder_link.y",
+        "shoulder_link.x",
+        "half_arm_1_link.x"
+      ],
+      "column_variations": {
+        "joint_1": {
+          "std": 0.21016717786985878,
+          "range": 0.713,
+          "combined_score": 0.1498491978212093
+        },
+        "half_arm_1_link.y": {
+          "std": 0.10123202271971957,
+          "range": 0.33899999999999997,
+          "combined_score": 0.03431765570198493
+        },
+        "shoulder_link.y": {
+          "std": 0.1008337476979179,
+          "range": 0.33699999999999997,
+          "combined_score": 0.03398097297419833
+        },
+        "shoulder_link.x": {
+          "std": 0.09871079911715931,
+          "range": 0.329,
+          "combined_score": 0.03247585290954542
+        },
+        "half_arm_1_link.x": {
+          "std": 0.09768245369809567,
+          "range": 0.325,
+          "combined_score": 0.031746797451881095
+        }
+      }
+    },
+    {
+      "segment_id": 9,
+      "filename": "test_segment_009.csv",
+      "start_time": "50.056",
+      "end_time": "54.689",
+      "duration_seconds": 4.633000000000003,
+      "sample_count": 221,
+      "dominant_columns": [
+        "joint_2",
+        "shoulder_link.x",
+        "half_arm_1_link.x",
+        "half_arm_2_link.x",
+        "shoulder_link.z"
+      ],
+      "column_variations": {
+        "joint_2": {
+          "std": 0.18735652829834853,
+          "range": 0.633,
+          "combined_score": 0.11859668241285462
+        },
+        "shoulder_link.x": {
+          "std": 0.12209068606245248,
+          "range": 0.41000000000000003,
+          "combined_score": 0.05005718128560552
+        },
+        "half_arm_1_link.x": {
+          "std": 0.12208567791495417,
+          "range": 0.41000000000000003,
+          "combined_score": 0.050055127945131214
+        },
+        "half_arm_2_link.x": {
+          "std": 0.08521536367638985,
+          "range": 0.28600000000000003,
+          "combined_score": 0.0243715940114475
+        },
+        "shoulder_link.z": {
+          "std": 0.08445283320653278,
+          "range": 0.281,
+          "combined_score": 0.023731246131035715
+        }
+      }
+    },
+    {
+      "segment_id": 10,
+      "filename": "test_segment_010.csv",
+      "start_time": "55.831",
+      "end_time": "60.551",
+      "duration_seconds": 4.719999999999999,
+      "sample_count": 225,
+      "dominant_columns": [
+        "joint_3",
+        "forearm_link.y",
+        "half_arm_1_link.y",
+        "shoulder_link.y",
+        "half_arm_2_link.y"
+      ],
+      "column_variations": {
+        "joint_3": {
+          "std": 0.1906326000826871,
+          "range": 0.644,
+          "combined_score": 0.1227673944532505
+        },
+        "forearm_link.y": {
+          "std": 0.05056877369499752,
+          "range": 0.17,
+          "combined_score": 0.00859669152814958
+        },
+        "half_arm_1_link.y": {
+          "std": 0.05014483665201377,
+          "range": 0.16899999999999998,
+          "combined_score": 0.008474477394190326
+        },
+        "shoulder_link.y": {
+          "std": 0.05013953743589697,
+          "range": 0.16799999999999998,
+          "combined_score": 0.00842344228923069
+        },
+        "half_arm_2_link.y": {
+          "std": 0.05013769255047258,
+          "range": 0.16799999999999998,
+          "combined_score": 0.008423132348479393
+        }
+      }
+    },
+    {
+      "segment_id": 11,
+      "filename": "test_segment_011.csv",
+      "start_time": "61.668",
+      "end_time": "66.757",
+      "duration_seconds": 5.089000000000006,
+      "sample_count": 243,
+      "dominant_columns": [
+        "joint_4",
+        "forearm_link.x",
+        "shoulder_link.x",
+        "half_arm_2_link.x",
+        "half_arm_1_link.x"
+      ],
+      "column_variations": {
+        "joint_4": {
+          "std": 0.20595711527726673,
+          "range": 0.698,
+          "combined_score": 0.14375806646353217
+        },
+        "forearm_link.x": {
+          "std": 0.08736996021496458,
+          "range": 0.293,
+          "combined_score": 0.025599398342984622
+        },
+        "shoulder_link.x": {
+          "std": 0.08734949178012912,
+          "range": 0.293,
+          "combined_score": 0.02559340109157783
+        },
+        "half_arm_2_link.x": {
+          "std": 0.08733675712622553,
+          "range": 0.293,
+          "combined_score": 0.02558966983798408
+        },
+        "half_arm_1_link.x": {
+          "std": 0.08733337792294554,
+          "range": 0.293,
+          "combined_score": 0.025588679731423043
+        }
+      }
+    },
+    {
+      "segment_id": 12,
+      "filename": "test_segment_012.csv",
+      "start_time": "67.905",
+      "end_time": "72.85",
+      "duration_seconds": 4.944999999999993,
+      "sample_count": 236,
+      "dominant_columns": [
+        "joint_5",
+        "spherical_wrist_1_link.y",
+        "half_arm_1_link.y",
+        "spherical_wrist_2_link.y",
+        "forearm_link.y"
+      ],
+      "column_variations": {
+        "joint_5": {
+          "std": 0.175035987850824,
+          "range": 0.594,
+          "combined_score": 0.10397137678338945
+        },
+        "spherical_wrist_1_link.y": {
+          "std": 0.013975220845912606,
+          "range": 0.047,
+          "combined_score": 0.0006568353797578925
+        },
+        "half_arm_1_link.y": {
+          "std": 0.013967740768834409,
+          "range": 0.04699999999999999,
+          "combined_score": 0.0006564838161352172
+        },
+        "spherical_wrist_2_link.y": {
+          "std": 0.013967740768834407,
+          "range": 0.047,
+          "combined_score": 0.0006564838161352172
+        },
+        "forearm_link.y": {
+          "std": 0.013963666081267418,
+          "range": 0.047,
+          "combined_score": 0.0006562923058195686
+        }
+      }
+    },
+    {
+      "segment_id": 13,
+      "filename": "test_segment_013.csv",
+      "start_time": "73.975",
+      "end_time": "78.136",
+      "duration_seconds": 4.161000000000001,
+      "sample_count": 199,
+      "dominant_columns": [
+        "joint_6",
+        "half_arm_1_link.x",
+        "forearm_link.x",
+        "spherical_wrist_2_link.x",
+        "shoulder_link.x"
+      ],
+      "column_variations": {
+        "joint_6": {
+          "std": 0.1477370270994511,
+          "range": 0.501,
+          "combined_score": 0.07401625057682501
+        },
+        "half_arm_1_link.x": {
+          "std": 0.02417660119365188,
+          "range": 0.08199999999999999,
+          "combined_score": 0.001982481297879454
+        },
+        "forearm_link.x": {
+          "std": 0.02416588085446524,
+          "range": 0.082,
+          "combined_score": 0.0019816022300661496
+        },
+        "spherical_wrist_2_link.x": {
+          "std": 0.024147688446658565,
+          "range": 0.082,
+          "combined_score": 0.0019801104526260024
+        },
+        "shoulder_link.x": {
+          "std": 0.02414768844665856,
+          "range": 0.08199999999999999,
+          "combined_score": 0.001980110452626002
+        }
+      }
+    },
+    {
+      "segment_id": 14,
+      "filename": "test_segment_014.csv",
+      "start_time": "79.31",
+      "end_time": "83.894",
+      "duration_seconds": 4.584000000000003,
+      "sample_count": 219,
+      "dominant_columns": [
+        "joint_7",
+        "half_arm_2_link.x",
+        "joint_1",
+        "joint_2",
+        "joint_3"
+      ],
+      "column_variations": {
+        "joint_7": {
+          "std": 0.16244647355918554,
+          "range": 0.551,
+          "combined_score": 0.08950800693111124
+        },
+        "half_arm_2_link.x": {
+          "std": 0.0003346920488183223,
+          "range": 0.0010000000000000009,
+          "combined_score": 3.346920488183226e-07
+        },
+        "joint_1": {
+          "std": 2.086437176669167e-17,
+          "range": 0.0,
+          "combined_score": 0.0
+        },
+        "joint_2": {
+          "std": 1.7386976472243056e-18,
+          "range": 0.0,
+          "combined_score": 0.0
+        },
+        "joint_3": {
+          "std": 6.954790588897222e-18,
+          "range": 0.0,
+          "combined_score": 0.0
+        }
+      }
+    }
+  ]
+}
