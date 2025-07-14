@@ -10,8 +10,6 @@ This script takes a CSV file with timestamped robot joint data and:
 """
 
 import pandas as pd
-import numpy as np
-import os
 import argparse
 from pathlib import Path
 import json
@@ -52,22 +50,28 @@ def calculate_column_variation(df, exclude_columns=None):
     
     return variations
 
-def find_dominant_columns(variations, top_n=3, method='combined_score'):
+def find_dominant_columns(variations, top_n=3, method='combined_score', threshold=0.001):
     """
     Find the columns with highest variation based on specified method.
     """
     if not variations:
         return []
-    
+
+    # Filter by threshold
+    filtered_cols = [
+        (col, data[method]) for col, data in variations.items()
+        if data[method] > threshold
+    ]
+
     # Sort by the specified method
-    sorted_cols = sorted(variations.items(), 
-                        key=lambda x: x[1][method], 
+    sorted_cols = sorted(filtered_cols,
+                        key=lambda x: x[1], 
                         reverse=True)
     
     # Return top N column names
     return [col for col, _ in sorted_cols[:top_n]]
 
-def segment_data(df, timestamp_col, threshold=0.1):
+def segment_data(df, timestamp_col, threshold=0.05):
     """
     Segment the data based on timestamp gaps.
     
@@ -89,7 +93,7 @@ def segment_data(df, timestamp_col, threshold=0.1):
     segments = []
     segment_start = 0
 
-    for i in range(1, len(df)):
+    for i in range(0, len(df)):
         # Calculate time difference (same units as timestamp)
         time_diff = df[timestamp_col].iloc[i] - df[timestamp_col].iloc[i-1]
         
@@ -125,10 +129,6 @@ def save_segment_files(segments, output_dir, base_filename, timestamp_col):
     }
     
     for i, segment in enumerate(segments):
-        # Create filename
-        segment_filename = f"{base_filename}_segment_{i+1:03d}.csv"
-        segment_path = output_path / segment_filename
-        
         # Calculate segment statistics
         start_time = segment[timestamp_col].iloc[0]
         end_time = segment[timestamp_col].iloc[-1]
@@ -137,18 +137,43 @@ def save_segment_files(segments, output_dir, base_filename, timestamp_col):
             duration = (end_time - start_time).total_seconds()
         else:
             duration = end_time - start_time
+
+        # Set variance threshold
+        variation_threshold = 0.0001
         
         # Calculate column variations
+        variations = calculate_column_variation(segment, exclude_columns=[timestamp_col])
+
+        # Remove columns below threshold
+        columns_to_keep = [
+            col for col, metrics in variations.items()
+            if metrics['combined_score'] > variation_threshold
+        ]
+
+        # Always include timestamp
+        columns_to_keep = [timestamp_col] + columns_to_keep
+
+        # Filter segment columns
+        segment = segment[columns_to_keep]
+
+        # Recalculate variations after filtering
         variations = calculate_column_variation(segment, exclude_columns=[timestamp_col])
         
         # Find dominant columns
         dominant_cols = find_dominant_columns(variations, top_n=5)
+
 
         # Get only top N column variations for metadata
         top_variations = {}
         for col in dominant_cols:
             if col in variations:
                 top_variations[col] = {k: float(v) for k, v in variations[col].items()}
+
+        first_with_joint = next((s for s in top_variations if "joint" in s), None)
+        
+        # Create filename
+        segment_filename = f"{base_filename}_{first_with_joint}_segment_{i+1:03d}.csv"
+        segment_path = output_path / segment_filename
         
         # Save segment to CSV
         segment.to_csv(segment_path, index=False)
@@ -184,8 +209,8 @@ def main():
     parser.add_argument('input_file', help='Input CSV file path')
     parser.add_argument('--timestamp-col', '-t', default='timestamp', 
                        help='Name of timestamp column (default: timestamp)')
-    parser.add_argument('--threshold', '-th', type=float, default=0.1,
-                       help='Time gap threshold in seconds (default: 0.1)')
+    parser.add_argument('--threshold', '-th', type=float, default=0.05,
+                       help='Time gap threshold in seconds (default: 0.05)')
     parser.add_argument('--output-dir', '-o', default='segments',
                        help='Output directory for segment files (default: segments)')
 
@@ -216,7 +241,7 @@ def main():
     
     # Save segments
     try:
-        metadata = save_segment_files(segments, args.output_dir, base_filename, args.timestamp_col)
+        _metadata = save_segment_files(segments, args.output_dir, base_filename, args.timestamp_col)
         print(f"\nProcessing complete! Created {len(segments)} segment files.")
     except Exception as e:
         print(f"Error saving segments: {e}")
