@@ -23,6 +23,7 @@ def calculate_column_variation(df, exclude_columns=None):
         exclude_columns = []
     
     variations = {}
+
     
     for col in df.columns:
         if col in exclude_columns:
@@ -41,7 +42,7 @@ def calculate_column_variation(df, exclude_columns=None):
         
         # Range (max - min)
         range_val = data.max() - data.min()
-        
+
         variations[col] = {
             'std': std_dev,
             'range': range_val,
@@ -50,7 +51,7 @@ def calculate_column_variation(df, exclude_columns=None):
     
     return variations
 
-def find_dominant_columns(variations, top_n=3, method='combined_score', threshold=0.001):
+def find_dominant_columns(variations, top_n=3, method='std', threshold=0.005):
     """
     Find the columns with highest variation based on specified method.
     """
@@ -71,7 +72,25 @@ def find_dominant_columns(variations, top_n=3, method='combined_score', threshol
     # Return top N column names
     return [col for col, _ in sorted_cols[:top_n]]
 
-def segment_data(df, timestamp_col, threshold=0.05):
+def has_joint_changes(segment, joint_columns):
+    """
+    Check if any joint column has changes (non-constant values) in the segment
+    
+    Args:
+        segment: DataFrame segment to check
+        joint_columns: List of joint column names (e.g., ['joint_1', 'joint_2', ...])
+    
+    Returns:
+        bool: True if any joint column has changes, False if all are constant
+    """
+    for joint_col in joint_columns:
+        if joint_col in segment.columns:
+            # Check if the column has more than one unique value
+            if segment[joint_col].nunique() > 2:
+                return True
+    return False
+
+def segment_data(df, timestamp_col, threshold=0.08):
     """
     Segment the data based on timestamp gaps.
     
@@ -99,6 +118,13 @@ def segment_data(df, timestamp_col, threshold=0.05):
         
         # If gap is larger than threshold, create new segment
         if time_diff > threshold:
+            # Add condition if no joint changes
+            joint_columns = ['joint_1', 'joint_2', 'joint_3', 'joint_4', 'joint_5', 'joint_6', 'joint_7']
+            
+            # Only add segment if it has joint changes
+            if not has_joint_changes(df.iloc[segment_start:i].copy(), joint_columns):
+                segment_start=i
+                continue
             # Add current segment
             segment = df.iloc[segment_start:i].copy()
             if len(segment) > 1:  # Only add segments with more than 1 sample
@@ -139,29 +165,13 @@ def save_segment_files(segments, output_dir, base_filename, timestamp_col):
             duration = end_time - start_time
 
         # Set variance threshold
-        variation_threshold = 0.0001
+        # variation_threshold = 0.0001
         
         # Calculate column variations
         variations = calculate_column_variation(segment, exclude_columns=[timestamp_col])
 
-        # Remove columns below threshold
-        columns_to_keep = [
-            col for col, metrics in variations.items()
-            if metrics['combined_score'] > variation_threshold
-        ]
-
-        # Always include timestamp
-        columns_to_keep = [timestamp_col] + columns_to_keep
-
-        # Filter segment columns
-        segment = segment[columns_to_keep]
-
-        # Recalculate variations after filtering
-        variations = calculate_column_variation(segment, exclude_columns=[timestamp_col])
-        
         # Find dominant columns
         dominant_cols = find_dominant_columns(variations, top_n=5)
-
 
         # Get only top N column variations for metadata
         top_variations = {}
@@ -170,6 +180,29 @@ def save_segment_files(segments, output_dir, base_filename, timestamp_col):
                 top_variations[col] = {k: float(v) for k, v in variations[col].items()}
 
         first_with_joint = next((s for s in top_variations if "joint" in s), None)
+
+        if first_with_joint == "joint_1":
+            prefix = 'shoulder_link'
+        elif first_with_joint == "joint_2":
+            prefix = 'half_arm_1_link'
+        elif first_with_joint == "joint_3":
+            prefix = 'half_arm_2_link'
+        elif first_with_joint == "joint_4":
+            prefix = 'forearm_link'
+        elif first_with_joint == "joint_5":
+            prefix = 'spherical_wrist_1_link'
+        elif first_with_joint == "joint_6":
+            prefix = 'spherical_wrist_2_link'
+        elif first_with_joint == "joint_7":
+            prefix = 'bracelet_link'
+        else:
+            prefix = ""
+
+        # Get matching columns
+        columns_to_keep = [col for col in segment.columns if col.startswith(prefix)]
+        columns_to_keep = [first_with_joint] + columns_to_keep
+        columns_to_keep = [timestamp_col] + columns_to_keep
+        segment = segment[columns_to_keep]
         
         # Create filename
         segment_filename = f"{base_filename}_{first_with_joint}_segment_{i+1:03d}.csv"
@@ -209,8 +242,8 @@ def main():
     parser.add_argument('input_file', help='Input CSV file path')
     parser.add_argument('--timestamp-col', '-t', default='timestamp', 
                        help='Name of timestamp column (default: timestamp)')
-    parser.add_argument('--threshold', '-th', type=float, default=0.05,
-                       help='Time gap threshold in seconds (default: 0.05)')
+    parser.add_argument('--threshold', '-th', type=float, default=0.08,
+                       help='Time gap threshold in seconds (default: 0.08)')
     parser.add_argument('--output-dir', '-o', default='segments',
                        help='Output directory for segment files (default: segments)')
 

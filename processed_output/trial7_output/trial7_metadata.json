@@ -1,0 +1,545 @@
+{
+  "total_segments": 14,
+  "segments": [
+    {
+      "segment_id": 1,
+      "filename": "trial7_joint_7_segment_001.csv",
+      "start_time": "0.002",
+      "end_time": "4.337",
+      "duration_seconds": 4.335,
+      "sample_count": 86,
+      "dominant_columns": [
+        "joint_7"
+      ],
+      "column_variations": {
+        "joint_7": {
+          "std": 0.15478172970758605,
+          "range": 0.5051,
+          "combined_score": 0.07818025167530171
+        }
+      }
+    },
+    {
+      "segment_id": 2,
+      "filename": "trial7_joint_6_segment_002.csv",
+      "start_time": "5.367",
+      "end_time": "9.345",
+      "duration_seconds": 3.9780000000000006,
+      "sample_count": 79,
+      "dominant_columns": [
+        "joint_6",
+        "bracelet_link.x_hat",
+        "bracelet_link.z_hat",
+        "half_arm_1_link.x",
+        "shoulder_link.x"
+      ],
+      "column_variations": {
+        "joint_6": {
+          "std": 0.1423269242494534,
+          "range": 0.46596,
+          "combined_score": 0.0663186536232753
+        },
+        "bracelet_link.x_hat": {
+          "std": 0.13648419851936064,
+          "range": 0.44832,
+          "combined_score": 0.06118859588019976
+        },
+        "bracelet_link.z_hat": {
+          "std": 0.034076523528099464,
+          "range": 0.10655999999999999,
+          "combined_score": 0.0036311943471542783
+        },
+        "half_arm_1_link.x": {
+          "std": 0.0228747140849035,
+          "range": 0.07514000000000001,
+          "combined_score": 0.001718806016339649
+        },
+        "shoulder_link.x": {
+          "std": 0.022874644842345002,
+          "range": 0.07514000000000001,
+          "combined_score": 0.0017188008134538038
+        }
+      }
+    },
+    {
+      "segment_id": 3,
+      "filename": "trial7_joint_5_segment_003.csv",
+      "start_time": "10.401",
+      "end_time": "15.96",
+      "duration_seconds": 5.559000000000001,
+      "sample_count": 110,
+      "dominant_columns": [
+        "joint_5",
+        "spherical_wrist_2_link.x_hat",
+        "bracelet_link.y_hat",
+        "spherical_wrist_2_link.y_hat",
+        "bracelet_link.x_hat"
+      ],
+      "column_variations": {
+        "joint_5": {
+          "std": 0.19819278256550923,
+          "range": 0.6569699999999999,
+          "combined_score": 0.1302067123620626
+        },
+        "spherical_wrist_2_link.x_hat": {
+          "std": 0.18578384414669002,
+          "range": 0.6105499999999999,
+          "combined_score": 0.11343032604376158
+        },
+        "bracelet_link.y_hat": {
+          "std": 0.08344011793541459,
+          "range": 0.27422,
+          "combined_score": 0.02288094914024939
+        },
+        "spherical_wrist_2_link.y_hat": {
+          "std": 0.0660811215342755,
+          "range": 0.20804,
+          "combined_score": 0.013747516523990677
+        },
+        "bracelet_link.x_hat": {
+          "std": 0.029673888119103764,
+          "range": 0.09342,
+          "combined_score": 0.0027721346280866737
+        }
+      }
+    },
+    {
+      "segment_id": 4,
+      "filename": "trial7_joint_4_segment_004.csv",
+      "start_time": "16.976",
+      "end_time": "19.782",
+      "duration_seconds": 2.806000000000001,
+      "sample_count": 56,
+      "dominant_columns": [
+        "joint_4",
+        "spherical_wrist_1_link.x_hat",
+        "bracelet_link.x_hat",
+        "spherical_wrist_2_link.z_hat",
+        "bracelet_link.z_hat"
+      ],
+      "column_variations": {
+        "joint_4": {
+          "std": 0.11510612249377505,
+          "range": 0.36946999999999997,
+          "combined_score": 0.04252825907777506
+        },
+        "spherical_wrist_1_link.x_hat": {
+          "std": 0.11447666310582325,
+          "range": 0.36096,
+          "combined_score": 0.041321496314677957
+        },
+        "bracelet_link.x_hat": {
+          "std": 0.09460301849042661,
+          "range": 0.29849,
+          "combined_score": 0.028238054989207437
+        },
+        "spherical_wrist_2_link.z_hat": {
+          "std": 0.06990005232705247,
+          "range": 0.22041000000000002,
+          "combined_score": 0.015406670533405636
+        },
+        "bracelet_link.z_hat": {
+          "std": 0.06026154492073504,
+          "range": 0.18863999999999992,
+          "combined_score": 0.011367737833847452
+        }
+      }
+    },
+    {
+      "segment_id": 5,
+      "filename": "trial7_joint_3_segment_005.csv",
+      "start_time": "20.852",
+      "end_time": "25.187",
+      "duration_seconds": 4.335000000000001,
+      "sample_count": 86,
+      "dominant_columns": [
+        "joint_3",
+        "forearm_link.x_hat",
+        "spherical_wrist_2_link.y_hat",
+        "spherical_wrist_2_link.x_hat",
+        "bracelet_link.y_hat"
+      ],
+      "column_variations": {
+        "joint_3": {
+          "std": 0.17691990451310868,
+          "range": 0.57885,
+          "combined_score": 0.10241008672741296
+        },
+        "forearm_link.x_hat": {
+          "std": 0.16873285165327218,
+          "range": 0.54661,
+          "combined_score": 0.09223106404219511
+        },
+        "spherical_wrist_2_link.y_hat": {
+          "std": 0.1368663773876559,
+          "range": 0.44010000000000005,
+          "combined_score": 0.06023489268830736
+        },
+        "spherical_wrist_2_link.x_hat": {
+          "std": 0.10492250907966882,
+          "range": 0.34014999999999995,
+          "combined_score": 0.03568939146344934
+        },
+        "bracelet_link.y_hat": {
+          "std": 0.0965012988099691,
+          "range": 0.31296999999999997,
+          "combined_score": 0.030202011488556026
+        }
+      }
+    },
+    {
+      "segment_id": 6,
+      "filename": "trial7_joint_2_segment_006.csv",
+      "start_time": "26.238",
+      "end_time": "32.461",
+      "duration_seconds": 6.222999999999999,
+      "sample_count": 123,
+      "dominant_columns": [
+        "joint_2",
+        "half_arm_2_link.x_hat",
+        "spherical_wrist_2_link.z_hat",
+        "spherical_wrist_1_link.x_hat",
+        "shoulder_link.x"
+      ],
+      "column_variations": {
+        "joint_2": {
+          "std": 0.25335592034758125,
+          "range": 0.84449,
+          "combined_score": 0.21395654117432888
+        },
+        "half_arm_2_link.x_hat": {
+          "std": 0.22622469824794636,
+          "range": 0.74675,
+          "combined_score": 0.16893329341665395
+        },
+        "spherical_wrist_2_link.z_hat": {
+          "std": 0.1835413080630819,
+          "range": 0.6053999999999999,
+          "combined_score": 0.11111590790138977
+        },
+        "spherical_wrist_1_link.x_hat": {
+          "std": 0.18044498491889538,
+          "range": 0.5948,
+          "combined_score": 0.10732867702975897
+        },
+        "shoulder_link.x": {
+          "std": 0.1710786164770855,
+          "range": 0.5644199999999999,
+          "combined_score": 0.09656019271199659
+        }
+      }
+    },
+    {
+      "segment_id": 7,
+      "filename": "trial7_joint_1_segment_007.csv",
+      "start_time": "33.513",
+      "end_time": "37.695",
+      "duration_seconds": 4.182000000000002,
+      "sample_count": 83,
+      "dominant_columns": [
+        "joint_1",
+        "half_arm_1_link.x_hat",
+        "spherical_wrist_1_link.y_hat",
+        "bracelet_link.x_hat",
+        "half_arm_2_link.y_hat"
+      ],
+      "column_variations": {
+        "joint_1": {
+          "std": 0.17065967157103826,
+          "range": 0.5562999999999999,
+          "combined_score": 0.09493797529496857
+        },
+        "half_arm_1_link.x_hat": {
+          "std": 0.1612940849329325,
+          "range": 0.52686,
+          "combined_score": 0.08497940158776482
+        },
+        "spherical_wrist_1_link.y_hat": {
+          "std": 0.13560251573611806,
+          "range": 0.4433,
+          "combined_score": 0.06011259522582114
+        },
+        "bracelet_link.x_hat": {
+          "std": 0.13217302451229448,
+          "range": 0.42869,
+          "combined_score": 0.05666125387817553
+        },
+        "half_arm_2_link.y_hat": {
+          "std": 0.1205900112549038,
+          "range": 0.39391,
+          "combined_score": 0.04750161133341915
+        }
+      }
+    },
+    {
+      "segment_id": 8,
+      "filename": "trial7_joint_1_segment_008.csv",
+      "start_time": "38.695",
+      "end_time": "42.367",
+      "duration_seconds": 3.671999999999997,
+      "sample_count": 73,
+      "dominant_columns": [
+        "joint_1",
+        "half_arm_1_link.x_hat",
+        "bracelet_link.x_hat",
+        "spherical_wrist_1_link.y_hat",
+        "half_arm_2_link.y_hat"
+      ],
+      "column_variations": {
+        "joint_1": {
+          "std": 0.15006299082902658,
+          "range": 0.48657,
+          "combined_score": 0.07301614944767947
+        },
+        "half_arm_1_link.x_hat": {
+          "std": 0.1429628823367359,
+          "range": 0.45809000000000005,
+          "combined_score": 0.06548986676963536
+        },
+        "bracelet_link.x_hat": {
+          "std": 0.11995460149643043,
+          "range": 0.38617000000000007,
+          "combined_score": 0.04632286845987655
+        },
+        "spherical_wrist_1_link.y_hat": {
+          "std": 0.11946237670123623,
+          "range": 0.38206000000000007,
+          "combined_score": 0.04564179564247432
+        },
+        "half_arm_2_link.y_hat": {
+          "std": 0.10688491905033065,
+          "range": 0.34248999999999996,
+          "combined_score": 0.03660701592554774
+        }
+      }
+    },
+    {
+      "segment_id": 9,
+      "filename": "trial7_joint_2_segment_009.csv",
+      "start_time": "43.382",
+      "end_time": "47.055",
+      "duration_seconds": 3.673000000000002,
+      "sample_count": 73,
+      "dominant_columns": [
+        "joint_2",
+        "half_arm_2_link.x_hat",
+        "spherical_wrist_1_link.z_hat",
+        "bracelet_link.z_hat",
+        "spherical_wrist_2_link.x_hat"
+      ],
+      "column_variations": {
+        "joint_2": {
+          "std": 0.15021021925465391,
+          "range": 0.48895,
+          "combined_score": 0.07344528670456303
+        },
+        "half_arm_2_link.x_hat": {
+          "std": 0.12236654750419909,
+          "range": 0.39811,
+          "combined_score": 0.0487153462268967
+        },
+        "spherical_wrist_1_link.z_hat": {
+          "std": 0.1147573721344669,
+          "range": 0.37492,
+          "combined_score": 0.04302483396065433
+        },
+        "bracelet_link.z_hat": {
+          "std": 0.10740376184158777,
+          "range": 0.35086000000000006,
+          "combined_score": 0.03768368387973949
+        },
+        "spherical_wrist_2_link.x_hat": {
+          "std": 0.1026500448574991,
+          "range": 0.33533999999999997,
+          "combined_score": 0.03442266604251375
+        }
+      }
+    },
+    {
+      "segment_id": 10,
+      "filename": "trial7_joint_3_segment_010.csv",
+      "start_time": "48.104",
+      "end_time": "54.735",
+      "duration_seconds": 6.631,
+      "sample_count": 131,
+      "dominant_columns": [
+        "joint_3",
+        "forearm_link.x_hat",
+        "spherical_wrist_2_link.y_hat",
+        "spherical_wrist_2_link.x_hat",
+        "bracelet_link.y_hat"
+      ],
+      "column_variations": {
+        "joint_3": {
+          "std": 0.2698886512830646,
+          "range": 0.90298,
+          "combined_score": 0.24370405433558168
+        },
+        "forearm_link.x_hat": {
+          "std": 0.24267262073297768,
+          "range": 0.8017,
+          "combined_score": 0.1945506400416282
+        },
+        "spherical_wrist_2_link.y_hat": {
+          "std": 0.18842340727523021,
+          "range": 0.6196200000000001,
+          "combined_score": 0.11675091161587815
+        },
+        "spherical_wrist_2_link.x_hat": {
+          "std": 0.1654579758785658,
+          "range": 0.5416000000000001,
+          "combined_score": 0.08961203973583126
+        },
+        "bracelet_link.y_hat": {
+          "std": 0.1562637364263947,
+          "range": 0.5144200000000001,
+          "combined_score": 0.08038519129246598
+        }
+      }
+    },
+    {
+      "segment_id": 11,
+      "filename": "trial7_joint_4_segment_011.csv",
+      "start_time": "55.792",
+      "end_time": "63.291",
+      "duration_seconds": 7.498999999999995,
+      "sample_count": 148,
+      "dominant_columns": [
+        "joint_4",
+        "spherical_wrist_1_link.x_hat",
+        "bracelet_link.x_hat",
+        "spherical_wrist_2_link.z_hat",
+        "bracelet_link.z_hat"
+      ],
+      "column_variations": {
+        "joint_4": {
+          "std": 0.304757502968463,
+          "range": 1.0192,
+          "combined_score": 0.3106088470254575
+        },
+        "spherical_wrist_1_link.x_hat": {
+          "std": 0.281507471753165,
+          "range": 0.92518,
+          "combined_score": 0.26044508271659317
+        },
+        "bracelet_link.x_hat": {
+          "std": 0.23021736196482093,
+          "range": 0.75127,
+          "combined_score": 0.17295539752331102
+        },
+        "spherical_wrist_2_link.z_hat": {
+          "std": 0.1765847794638006,
+          "range": 0.5805199999999999,
+          "combined_score": 0.10251099617432552
+        },
+        "bracelet_link.z_hat": {
+          "std": 0.1562913848083173,
+          "range": 0.5087900000000001,
+          "combined_score": 0.07951949367662378
+        }
+      }
+    },
+    {
+      "segment_id": 12,
+      "filename": "trial7_joint_5_segment_012.csv",
+      "start_time": "64.319",
+      "end_time": "72.123",
+      "duration_seconds": 7.804000000000002,
+      "sample_count": 154,
+      "dominant_columns": [
+        "joint_5",
+        "spherical_wrist_2_link.x_hat",
+        "bracelet_link.y_hat",
+        "spherical_wrist_2_link.z_hat",
+        "spherical_wrist_2_link.y_hat"
+      ],
+      "column_variations": {
+        "joint_5": {
+          "std": 0.2775241261440239,
+          "range": 0.9310499999999999,
+          "combined_score": 0.2583888376463934
+        },
+        "spherical_wrist_2_link.x_hat": {
+          "std": 0.26013011210631914,
+          "range": 0.86224,
+          "combined_score": 0.22429458786255263
+        },
+        "bracelet_link.y_hat": {
+          "std": 0.11981888499279539,
+          "range": 0.3971,
+          "combined_score": 0.04758007923063905
+        },
+        "spherical_wrist_2_link.z_hat": {
+          "std": 0.0755859165821071,
+          "range": 0.24934,
+          "combined_score": 0.018846592440582587
+        },
+        "spherical_wrist_2_link.y_hat": {
+          "std": 0.033145434970309584,
+          "range": 0.10563999999999996,
+          "combined_score": 0.003501483750263503
+        }
+      }
+    },
+    {
+      "segment_id": 13,
+      "filename": "trial7_joint_6_segment_013.csv",
+      "start_time": "73.163",
+      "end_time": "80.814",
+      "duration_seconds": 7.650999999999996,
+      "sample_count": 151,
+      "dominant_columns": [
+        "joint_6",
+        "bracelet_link.x_hat",
+        "bracelet_link.y_hat",
+        "bracelet_link.z_hat",
+        "half_arm_1_link.x"
+      ],
+      "column_variations": {
+        "joint_6": {
+          "std": 0.27219781145329713,
+          "range": 0.9143399999999999,
+          "combined_score": 0.24888134692420769
+        },
+        "bracelet_link.x_hat": {
+          "std": 0.22284497975830422,
+          "range": 0.73985,
+          "combined_score": 0.16487185827418138
+        },
+        "bracelet_link.y_hat": {
+          "std": 0.1183659613330073,
+          "range": 0.39292,
+          "combined_score": 0.046508353526965224
+        },
+        "bracelet_link.z_hat": {
+          "std": 0.08987243861493925,
+          "range": 0.28717000000000004,
+          "combined_score": 0.025808668197052107
+        },
+        "half_arm_1_link.x": {
+          "std": 0.03733316751102404,
+          "range": 0.12395,
+          "combined_score": 0.00462744611299143
+        }
+      }
+    },
+    {
+      "segment_id": 14,
+      "filename": "trial7_joint_7_segment_014.csv",
+      "start_time": "81.851",
+      "end_time": "84.401",
+      "duration_seconds": 2.549999999999997,
+      "sample_count": 51,
+      "dominant_columns": [
+        "joint_7"
+      ],
+      "column_variations": {
+        "joint_7": {
+          "std": 0.09209706633934507,
+          "range": 0.29964,
+          "combined_score": 0.027595964957921357
+        }
+      }
+    }
+  ]
+}

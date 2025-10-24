@@ -1,0 +1,89 @@
+{
+  "total_segments": 2,
+  "segments": [
+    {
+      "segment_id": 1,
+      "filename": "joint_values_recording_0_joint_3_segment_001.csv",
+      "start_time": "0.002",
+      "end_time": "12.197",
+      "duration_seconds": 12.194999999999999,
+      "sample_count": 574,
+      "dominant_columns": [
+        "joint_3",
+        "joint_4",
+        "joint_7",
+        "joint_6",
+        "shoulder_link.y"
+      ],
+      "column_variations": {
+        "joint_3": {
+          "std": 0.4859328888354611,
+          "range": 1.6119999999999999,
+          "combined_score": 0.7833238168027632
+        },
+        "joint_4": {
+          "std": 0.35140152254716295,
+          "range": 1.166,
+          "combined_score": 0.40973417528999195
+        },
+        "joint_7": {
+          "std": 0.24303422304001096,
+          "range": 0.806,
+          "combined_score": 0.19588558377024884
+        },
+        "joint_6": {
+          "std": 0.14857810430964863,
+          "range": 0.493,
+          "combined_score": 0.07324900542465677
+        },
+        "shoulder_link.y": {
+          "std": 0.13856924291113945,
+          "range": 0.406,
+          "combined_score": 0.05625911262192262
+        }
+      }
+    },
+    {
+      "segment_id": 2,
+      "filename": "joint_values_recording_0_joint_3_segment_002.csv",
+      "start_time": "45.775",
+      "end_time": "58.92",
+      "duration_seconds": 13.145000000000003,
+      "sample_count": 616,
+      "dominant_columns": [
+        "joint_3",
+        "joint_7",
+        "joint_4",
+        "joint_6",
+        "half_arm_1_link.z"
+      ],
+      "column_variations": {
+        "joint_3": {
+          "std": 0.4728488009415856,
+          "range": 1.612,
+          "combined_score": 0.762232267117836
+        },
+        "joint_7": {
+          "std": 0.4660296414759917,
+          "range": 1.588,
+          "combined_score": 0.7400550706638749
+        },
+        "joint_4": {
+          "std": 0.341902869242265,
+          "range": 1.165,
+          "combined_score": 0.3983168426672387
+        },
+        "joint_6": {
+          "std": 0.1445936174200171,
+          "range": 0.493,
+          "combined_score": 0.07128465338806844
+        },
+        "half_arm_1_link.z": {
+          "std": 0.13771467843910581,
+          "range": 0.459,
+          "combined_score": 0.06321103740354957
+        }
+      }
+    }
+  ]
+}
